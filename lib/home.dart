@@ -25,6 +25,7 @@ class HomePage extends StatelessWidget {
                     padding:
                         const EdgeInsets.only(top: 20, right: 20, left: 20),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         ElevatedButton(
                             child: const Text("Page 1"),
@@ -34,7 +35,7 @@ class HomePage extends StatelessWidget {
                                   MaterialPageRoute(
                                       builder: (context) => const Page1()));
                             }),
-                        const Spacer(),
+                        // const Spacer(),
                         ElevatedButton(
                             child: const Text('Page 2'),
                             onPressed: () {
@@ -43,7 +44,7 @@ class HomePage extends StatelessWidget {
                                   MaterialPageRoute(
                                       builder: (context) => const Page2()));
                             }),
-                        const Spacer(),
+                        // const Spacer(),
                         ElevatedButton(
                             child: const Text('Page 3'),
                             onPressed: () {
