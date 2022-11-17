@@ -30,33 +30,51 @@ class Page2 extends StatelessWidget {
                           (states) => const Color.fromARGB(255, 139, 133, 133)),
                       columns: const [
                         DataColumn(
-                            label: Expanded(
-                                child: Text('عنوان',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.white,
-                                    )))),
+                          label: Expanded(
+                            child: Text(
+                              'عنوان',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
                         DataColumn(
-                            label: Expanded(
-                                child: Text('تاریخ خرید',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.white,
-                                    )))),
+                          label: Expanded(
+                            child: Text(
+                              'تاریخ خرید',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
                         DataColumn(
-                            label: Expanded(
-                                child: Text('قیمت',
-                                    style: TextStyle(
-                                        fontSize: 18, color: Colors.white)))),
+                          label: Expanded(
+                            child: Text(
+                              'قیمت',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
                         DataColumn(
-                            label: Expanded(
-                                child: Text("جزییات",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      color: Colors.white,
-                                    ))))
+                          label: Expanded(
+                            child: Text(
+                              "جزییات",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                       rows: [
                         DataRow(cells: [
