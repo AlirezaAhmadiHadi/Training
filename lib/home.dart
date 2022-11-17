@@ -57,6 +57,21 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
+            Row(
+              children: [
+                ElevatedButton(
+                  child: const Text("Page 4"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Page4(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            )
           ],
         ),
       ),
