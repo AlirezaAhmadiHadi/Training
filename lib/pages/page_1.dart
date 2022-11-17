@@ -14,8 +14,12 @@ class Page1 extends StatelessWidget {
       body: Directionality(
         textDirection: TextDirection.rtl,
         child: Padding(
-          padding:
-              const EdgeInsets.only(top: 20, bottom: 10, left: 10, right: 15),
+          padding: const EdgeInsets.only(
+            top: 20,
+            bottom: 10,
+            left: 10,
+            right: 15,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
