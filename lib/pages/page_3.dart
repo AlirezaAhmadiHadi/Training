@@ -18,11 +18,10 @@ class Page3 extends StatelessWidget {
             children: [
               Container(
                 margin: const EdgeInsets.only(top: 20),
-                // padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
                 child: Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                        onPressed: () {},
                       icon: const Icon(
                         Icons.navigate_before,
                         color: Colors.white,

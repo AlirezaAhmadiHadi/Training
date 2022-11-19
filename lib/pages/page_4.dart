@@ -10,9 +10,232 @@ class Page4 extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Page 4"),
       ),
-      body: const Directionality(
-        textDirection: TextDirection.rtl,
-        child: Text("This is Page 4"),
+      body: Container(
+        margin: const EdgeInsets.only(top: 20, right: 20, left: 20),
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.navigate_before,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(right: 3),
+                    child: const Text(
+                      "سابقه خرید",
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ),
+                ],
+              ),
+              Expanded(
+                child: ListView(
+                  children: [
+                    Container(
+                      color: const Color.fromARGB(255, 102, 99, 99),
+                      height: 40,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: const [
+                          Text(
+                            'عنوان',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'تاریخ خرید',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'قیمت',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'جزییات',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(right: 3),
+                      margin: const EdgeInsets.only(top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: const [
+                              Padding(
+                                padding: EdgeInsets.only(left: 4),
+                                child: Icon(
+                                  Icons.beenhere_outlined,
+                                  color: Colors.red,
+                                  size: 16,
+                                ),
+                              ),
+                              Text(
+                                "یک روزه",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                          const Text(
+                            '00/11/21',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const Text(
+                            '10/900',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.navigate_next,
+                                  color: Colors.white),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    const Divider(
+                      color: Color.fromARGB(255, 71, 71, 71),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(right: 3),
+                      margin: const EdgeInsets.only(top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: const [
+                              Padding(
+                                padding: EdgeInsets.only(left: 4),
+                                child: Icon(
+                                  Icons.beenhere_outlined,
+                                  color: Colors.red,
+                                  size: 16,
+                                ),
+                              ),
+                              Text(
+                                "یک روزه",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                          const Text(
+                            '00/11/21',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const Text(
+                            '10/900',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.navigate_next,
+                                  color: Colors.white),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    const Divider(
+                      color: Color.fromARGB(255, 71, 71, 71),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(right: 3),
+                      margin: const EdgeInsets.only(top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: const [
+                              Padding(
+                                padding: EdgeInsets.only(left: 4),
+                                child: Icon(
+                                  Icons.beenhere_outlined,
+                                  color: Colors.red,
+                                  size: 16,
+                                ),
+                              ),
+                              Text(
+                                "یک روزه",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                          const Text(
+                            '00/11/21',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const Text(
+                            '10/900',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(Icons.navigate_next,
+                                  color: Colors.white),
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
