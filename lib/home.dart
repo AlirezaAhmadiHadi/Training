@@ -4,6 +4,7 @@ import 'pages/page_1.dart';
 import 'pages/page_2.dart';
 import 'pages/page_3.dart';
 import 'pages/page_4.dart';
+import 'pages/page_5.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -58,6 +59,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ElevatedButton(
                   child: const Text("Page 4"),
@@ -66,6 +68,17 @@ class HomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const Page4(),
+                      ),
+                    );
+                  },
+                ),
+                ElevatedButton(
+                  child: const Text("Page 5"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Page5(),
                       ),
                     );
                   },
