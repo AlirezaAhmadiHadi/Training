@@ -37,7 +37,6 @@ class Page3 extends StatelessWidget {
                   ],
                 ),
               ),
-              // title
               Container(
                 color: const Color.fromARGB(255, 102, 99, 99),
                 height: 40,
@@ -75,9 +74,8 @@ class Page3 extends StatelessWidget {
                   ],
                 ),
               ),
-              // row1
               Container(
-                padding: const EdgeInsets.only(right: 3),
+                // padding: const EdgeInsets.only(right: 3),
                 margin: const EdgeInsets.only(top: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -129,9 +127,8 @@ class Page3 extends StatelessWidget {
               const Divider(
                 color: Color.fromARGB(255, 71, 71, 71),
               ),
-              // row2
               Container(
-                padding: const EdgeInsets.only(right: 3),
+                // padding: const EdgeInsets.only(right: 3),
                 margin: const EdgeInsets.only(top: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -183,9 +180,8 @@ class Page3 extends StatelessWidget {
               const Divider(
                 color: Color.fromARGB(255, 71, 71, 71),
               ),
-              // row3
               Container(
-                padding: const EdgeInsets.only(right: 3),
+                // padding: const EdgeInsets.only(right: 3),
                 margin: const EdgeInsets.only(top: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

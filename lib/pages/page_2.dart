@@ -19,7 +19,7 @@ class Page2 extends StatelessWidget {
             children: [
               DataTable(
                 horizontalMargin: 10,
-                columnSpacing: 30,
+                columnSpacing: 22,
                 headingRowHeight:40,
                 headingRowColor: MaterialStateColor.resolveWith(
                   (states) => const Color.fromARGB(255, 139, 133, 133),
