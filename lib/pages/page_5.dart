@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MyBehavior extends ScrollBehavior {
-  @override
-  Widget buildOverscrollIndicator(
-      BuildContext context, Widget child, ScrollableDetails details) {
-    return child;
-  }
-}
 
 class Page5 extends StatelessWidget {
   Page5({super.key});
 
   final List<dynamic> rows = [
-    ['یک ماه و سی روز', '۰۰/۱۱/۲۱', '۱۰/۹۰۰'],
+    ['یک ماه و بیست و هشت روز', '۰۰/۱۱/۲۱', '۱۰/۹۰۰'],
     ['یک روزه', '۰۰/۱۱/۲۱', '۱۰/۹۰۰'],
     ['سه روزه', '۰۰/۱۱/۲۱', '۱۰/۹۰۰'],
     ['سه روزه', '۰۰/۱۱/۲۱', '۱۰/۹۰۰'],
@@ -97,84 +90,81 @@ class Page5 extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: ScrollConfiguration(
-                  behavior: MyBehavior(),
-                  child: ListView.separated(
-                    // physics: const BouncingScrollPhysics(),
-                    itemCount: rows.length,
-                    separatorBuilder: (context, index) {
-                      return const Divider(color: Colors.white, height: 1);
-                    },
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        margin: const EdgeInsets.only(top: 5, bottom: 5),
-                        height: 50,
-                        width: double.infinity,
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Center(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      margin: const EdgeInsets.only(right: 7, left: 4),
-                                      child: const Icon(
-                                        Icons.beenhere_outlined,
-                                        color: Colors.red,
-                                        size: 16,
-                                      ),
+                child: ListView.separated(
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: rows.length,
+                  separatorBuilder: (context, index) {
+                    return const Divider(color: Colors.white, height: 1);
+                  },
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      margin: const EdgeInsets.only(top: 5, bottom: 5),
+                      height: 50,
+                      width: double.infinity,
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Center(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(right: 7, left: 4),
+                                    child: const Icon(
+                                      Icons.beenhere_outlined,
+                                      color: Colors.red,
+                                      size: 16,
                                     ),
-                                    Text(
-                                      rows[index][0].toString(),
-                                      style: const TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.white,
-                                      ),
+                                  ),
+                                  Text(
+                                    rows[index][0].toString(),
+                                    style: const TextStyle(
+                                      fontSize: 15,
+                                      color: Colors.white,
                                     ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 90,
-                              child: Center(
-                                child: Text(
-                                  rows[index][1].toString(),
-                                  style: const TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.white,
                                   ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 90,
+                            child: Center(
+                              child: Text(
+                                rows[index][1].toString(),
+                                style: const TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              width: 62,
-                              child: Center(
-                                child: Text(
-                                  rows[index][2].toString(),
-                                  style: const TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.white,
-                                  ),
+                          ),
+                          SizedBox(
+                            width: 62,
+                            child: Center(
+                              child: Text(
+                                rows[index][2].toString(),
+                                style: const TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              width: 95,
-                              child: Center(
-                                child: IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(Icons.navigate_next,
-                                      color: Colors.white),
-                                ),
+                          ),
+                          SizedBox(
+                            width: 95,
+                            child: Center(
+                              child: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.navigate_next,
+                                    color: Colors.white),
                               ),
-                            )
-                          ],
-                        ),
-                      );
-                    },
-                  ),
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
                 ),
               )
             ],
