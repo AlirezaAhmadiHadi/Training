@@ -104,27 +104,30 @@ class Page5 extends StatelessWidget {
                       child: Row(
                         children: [
                           Expanded(
-                            child: Center(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Container(
-                                    margin: const EdgeInsets.only(right: 7, left: 4),
-                                    child: const Icon(
-                                      Icons.beenhere_outlined,
-                                      color: Colors.red,
-                                      size: 16,
-                                    ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 7, left: 4),
+                                  child: const Icon(
+                                    Icons.beenhere_outlined,
+                                    color: Colors.red,
+                                    size: 16,
                                   ),
-                                  Text(
+                                ),
+                                Expanded(
+                                  child: Text(
                                     rows[index][0].toString(),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    textAlign: TextAlign.center,
                                     style: const TextStyle(
                                       fontSize: 15,
                                       color: Colors.white,
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                           SizedBox(
