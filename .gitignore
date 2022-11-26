@@ -129,3 +129,6 @@ app.*.symbols
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
 .dart_tool/package_config.json
+.dart_tool/package_config_subset
+.dart_tool/package_config.json
+.dart_tool/version
