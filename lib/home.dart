@@ -5,6 +5,7 @@ import 'pages/page_2.dart';
 import 'pages/page_3.dart';
 import 'pages/page_4.dart';
 import 'pages/page_5.dart';
+import 'pages/page_6.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -79,6 +80,17 @@ class HomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => Page5(),
+                      ),
+                    );
+                  },
+                ),
+                ElevatedButton(
+                  child: const Text("Page 6"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Page6(),
                       ),
                     );
                   },
