@@ -60,36 +60,40 @@ class Page6 extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Stack(
-                      children: [
-                        SizedBox(
-                          height: 220,
-                          width: double.infinity,
-                          child: ShaderMask(
-                            shaderCallback: (Rect bounds) {
-                              return LinearGradient(
-                                colors: [
-                                  Color.fromARGB(0, 16, 19, 46),
-                                  Color.fromARGB(255, 255, 255, 255),
-                                ],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter,
-                                stops: [0, 0.05],
-                              ).createShader(bounds);
-                            },
-                            child: Image(
-                              image: AssetImage(
-                                'lib/images/youtuber-2838945.jpg',
+                    SizedBox(
+                      height: 220,
+                      width: double.infinity,
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                            height: 220,
+                            width: double.infinity,
+                            child: ShaderMask(
+                              shaderCallback: (Rect bounds) {
+                                return LinearGradient(
+                                  colors: [
+                                    Color.fromARGB(0, 16, 19, 46),
+                                    Color.fromARGB(255, 255, 255, 255),
+                                  ],
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter,
+                                  stops: [0, 0.05],
+                                ).createShader(bounds);
+                              },
+                              child: Image(
+                                image: AssetImage(
+                                  'lib/images/youtuber-2838945.jpg',
+                                ),
+                                fit: BoxFit.cover,
                               ),
-                              fit: BoxFit.cover,
                             ),
                           ),
-                        ),
-                        Container(                          
-                          alignment: Alignment.center,
-                          child: Column(
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Container(
                                     margin: EdgeInsets.only(left: 5),
@@ -105,6 +109,7 @@ class Page6 extends StatelessWidget {
                                 ],
                               ),
                               Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Container(
                                     padding: EdgeInsets.only(
@@ -153,10 +158,12 @@ class Page6 extends StatelessWidget {
                                   )
                                 ],
                               ),
+                              SizedBox(
+                                height: 22,
+                              )
                             ],
-                          ),
-                                              
-                        )],
+                          )],
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.all(12),
