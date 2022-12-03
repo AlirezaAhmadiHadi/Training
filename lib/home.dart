@@ -19,24 +19,54 @@ class HomePage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
-        child: Column(
-          children: <Widget>[
+        child: ListView(
+          children: [
+            Container(
+              margin: EdgeInsets.only(bottom: 5),
+              height: 30,
+              width: double.infinity,
+              color: Colors.red,
+              child: Center(
+                child: Text(
+                  "Get Start",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            ElevatedButton(
+              child: const Text("Small Profile"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Page1(),
+                  ),
+                );
+              },
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5, bottom: 5),
+              height: 30,
+              width: double.infinity,
+              color: Colors.red,
+              child: Center(
+                child: Text(
+                  "Table",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ElevatedButton(
-                  child: const Text("Page 1"),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Page1(),
-                      ),
-                    );
-                  },
-                ),
-                ElevatedButton(
-                  child: const Text('Page 2'),
+                  child: const Text('with Widget Table'),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -47,7 +77,7 @@ class HomePage extends StatelessWidget {
                   },
                 ),
                 ElevatedButton(
-                  child: const Text('Page 3'),
+                  child: const Text('without Widget Table'),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -56,25 +86,14 @@ class HomePage extends StatelessWidget {
                       ),
                     );
                   },
-                )
+                ),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ElevatedButton(
-                  child: const Text("Page 4"),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Page4(),
-                      ),
-                    );
-                  },
-                ),
-                ElevatedButton(
-                  child: const Text("Page 5"),
+                  child: const Text("listview.separated"),
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -85,21 +104,47 @@ class HomePage extends StatelessWidget {
                   },
                 ),
                 ElevatedButton(
-                  child: const Text("Page 6"),
+                  child: const Text("Simple Listview"),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Page6(),
+                        builder: (context) => const Page4(),
                       ),
                     );
                   },
                 ),
               ],
-            )
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 5, bottom: 5),
+              height: 30,
+              width: double.infinity,
+              color: Colors.red,
+              child: Center(
+                child: Text(
+                  "Ful Page",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            ElevatedButton(
+              child: const Text("Music List"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Page6(),
+                  ),
+                );
+              },
+            ),
+              
           ],
-        ),
-      ),
+        )),
     );
   }
 }
