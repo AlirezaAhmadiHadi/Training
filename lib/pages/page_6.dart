@@ -43,6 +43,8 @@ class Page6 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: Text("First full page"),
@@ -56,12 +58,12 @@ class Page6 extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 220,
+                height: screenHight * 0.3,
                 width: double.infinity,
                 child: Stack(
                   children: [
                     SizedBox(
-                      height: 220,
+                      height: screenHight * 0.3,
                       width: double.infinity,
                       child: ShaderMask(
                         shaderCallback: (Rect bounds) {
@@ -168,11 +170,14 @@ class Page6 extends StatelessWidget {
                 padding: EdgeInsets.all(12),
                 child: Column(
                   children: [
-                    Text(
-                      " علیرضا احمدی هادی در سال ۱۳۸۰ در اردبیل متولد شده است و اصالتا ترک است. پدرش اردبیلی و مادرش هم اردبیلی است او از سن ۱۱ سالگی ...",
-                      style: TextStyle(
-                          color: Color.fromARGB(255, 230, 230, 230),
-                          fontSize: 13),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        " علیرضا احمدی هادی در سال ۱۳۸۰ در اردبیل متولد شده است و اصالتا ترک است. پدرش اردبیلی و مادرش هم اردبیلی است او از سن ۱۱ سالگی ...",
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 230, 230, 230),
+                            fontSize: 13),
+                      ),
                     ),
                     Align(
                       alignment: Alignment.bottomLeft,
