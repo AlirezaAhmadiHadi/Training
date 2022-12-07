@@ -5,16 +5,16 @@ class Page6 extends StatelessWidget {
   Page6({super.key});
 
   final List<AssetImage> images = [
-    AssetImage("lib/images/image_1"),
-    AssetImage("lib/images/image_2"),
-    AssetImage("lib/images/image_3"),
-    AssetImage("lib/images/image_4"),
-    AssetImage("lib/images/image_5"),
-    AssetImage("lib/images/image_6"),
-    AssetImage("lib/images/image_7"),
-    AssetImage("lib/images/image_8"),
-    AssetImage("lib/images/image_9"),
-    AssetImage("lib/images/image_10"),
+    AssetImage("lib/images/image_1.jpeg"),
+    AssetImage("lib/images/image_2.jpeg"),
+    AssetImage("lib/images/image_3.jpeg"),
+    AssetImage("lib/images/image_4.jpeg"),
+    AssetImage("lib/images/image_5.jpeg"),
+    AssetImage("lib/images/image_6.jpeg"),
+    AssetImage("lib/images/image_7.jpeg"),
+    AssetImage("lib/images/image_8.jpeg"),
+    AssetImage("lib/images/image_9.jpeg"),
+    AssetImage("lib/images/image_10.jpeg"),
   ];
   final List<String> discriptions = [
     "food",
@@ -44,7 +44,7 @@ class Page6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenHight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+    // double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: Text("First full page"),
@@ -79,7 +79,7 @@ class Page6 extends StatelessWidget {
                         },
                         child: Image(
                           image: AssetImage(
-                            'lib/images/image_main',
+                            'lib/images/image_main.jpg',
                           ),
                           fit: BoxFit.cover,
                         ),

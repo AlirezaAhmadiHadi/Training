@@ -63,7 +63,7 @@
     },
     {
       "name": "font_awesome_flutter",
-      "rootUri": "file:///home/alireza/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-10.2.1",
+      "rootUri": "file:///home/alireza/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-10.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -152,7 +152,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-07T07:58:20.160755Z",
+  "generated": "2022-12-07T11:17:19.781536Z",
   "generator": "pub",
   "generatorVersion": "2.18.4"
 }
