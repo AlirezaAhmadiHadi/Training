@@ -5,11 +5,11 @@ class Page6 extends StatelessWidget {
   Page6({super.key});
 
   final List<AssetImage> images = [
-    AssetImage("lib/Images/pills-on-a-spoon-3821287.jpg"),
-    AssetImage("lib/Images/technology-785742.jpg"),
-    AssetImage("lib/Images/office-820390.jpg"),
-    AssetImage("lib/Images/office-865091.jpg"),
-    AssetImage("lib/Images/office-925806.jpg"),
+    AssetImage("lib/images/pills-on-a-spoon-3821287.jpg"),
+    AssetImage("lib/images/technology-785742.jpg"),
+    AssetImage("lib/images/office-820390.jpg"),
+    AssetImage("lib/images/office-865091.jpg"),
+    AssetImage("lib/images/office-925806.jpg"),
     AssetImage("lib/images/workplace-2303851.jpg"),
     AssetImage("lib/images/workplace-5517762.jpg"),
     AssetImage("lib/images/write-593333.jpg"),
@@ -236,7 +236,10 @@ class Page6 extends StatelessWidget {
                         leading: SizedBox(
                           width: 40,
                           height: 40,
-                          child: Image(image: images[index]),
+                          child: Image(
+                            image: images[index],
+                            fit: BoxFit.cover,
+                          ),
                         ),
                         trailing: Icon(
                           Icons.more_vert,
