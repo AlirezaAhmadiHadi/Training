@@ -175,8 +175,9 @@ class Page6 extends StatelessWidget {
                       child: Text(
                         " علیرضا احمدی هادی در سال ۱۳۸۰ در اردبیل متولد شده است و اصالتا ترک است. پدرش اردبیلی و مادرش هم اردبیلی است او از سن ۱۱ سالگی ...",
                         style: TextStyle(
-                            color: Color.fromARGB(255, 230, 230, 230),
-                            fontSize: 13),
+                          color: Color.fromARGB(255, 230, 230, 230),
+                          fontSize: 13,
+                        ),
                       ),
                     ),
                     Align(
@@ -232,30 +233,33 @@ class Page6 extends StatelessWidget {
                         height: 2,
                         thickness: .15),
                     itemBuilder: (context, index) {
-                      return ListTile(
-                        leading: SizedBox(
-                          width: 40,
-                          height: 40,
-                          child: Image(
-                            image: images[index],
-                            fit: BoxFit.cover,
+                      return OutlinedButton(
+                        onPressed: () {},
+                        child: ListTile(
+                          leading: SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: Image(
+                              image: images[index],
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                        trailing: Icon(
-                          Icons.more_vert,
-                          color: Color.fromARGB(255, 218, 218, 218),
-                        ),
-                        title: Text(
-                          titles[index],
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 240, 240, 240),
-                              fontSize: 18),
-                        ),
-                        subtitle: Text(
-                          discriptions[index],
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 158, 158, 158),
-                              fontSize: 13),
+                          trailing: Icon(
+                            Icons.more_vert,
+                            color: Color.fromARGB(255, 218, 218, 218),
+                          ),
+                          title: Text(
+                            titles[index],
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 240, 240, 240),
+                                fontSize: 18),
+                          ),
+                          subtitle: Text(
+                            discriptions[index],
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 158, 158, 158),
+                                fontSize: 13),
+                          ),
                         ),
                       );
                     },
