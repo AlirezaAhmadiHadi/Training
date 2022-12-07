@@ -5,16 +5,16 @@ class Page6 extends StatelessWidget {
   Page6({super.key});
 
   final List<AssetImage> images = [
-    AssetImage("lib/images/pills-on-a-spoon-3821287.jpg"),
-    AssetImage("lib/images/technology-785742.jpg"),
-    AssetImage("lib/images/office-820390.jpg"),
-    AssetImage("lib/images/office-865091.jpg"),
-    AssetImage("lib/images/office-925806.jpg"),
-    AssetImage("lib/images/workplace-2303851.jpg"),
-    AssetImage("lib/images/workplace-5517762.jpg"),
-    AssetImage("lib/images/write-593333.jpg"),
-    AssetImage("lib/images/writing-828911.jpg"),
-    AssetImage("lib/images/writing-1149962.jpg"),
+    AssetImage("lib/images/image_1"),
+    AssetImage("lib/images/image_2"),
+    AssetImage("lib/images/image_3"),
+    AssetImage("lib/images/image_4"),
+    AssetImage("lib/images/image_5"),
+    AssetImage("lib/images/image_6"),
+    AssetImage("lib/images/image_7"),
+    AssetImage("lib/images/image_8"),
+    AssetImage("lib/images/image_9"),
+    AssetImage("lib/images/image_10"),
   ];
   final List<String> discriptions = [
     "food",
@@ -79,7 +79,7 @@ class Page6 extends StatelessWidget {
                         },
                         child: Image(
                           image: AssetImage(
-                            'lib/images/youtuber-2838945.jpg',
+                            'lib/images/image_main',
                           ),
                           fit: BoxFit.cover,
                         ),
