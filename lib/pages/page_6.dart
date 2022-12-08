@@ -50,7 +50,7 @@ class Page6 extends StatelessWidget {
                             ],
                             begin: Alignment.bottomCenter,
                             end: Alignment.topCenter,
-                            stops: [0, 0.05],
+                            stops: [0, 0.6],
                           ).createShader(bounds);
                         },
                         child: Image.asset(
@@ -81,6 +81,9 @@ class Page6 extends StatelessWidget {
                               color: Colors.blue,
                             ),
                           ],
+                        ),
+                        SizedBox(
+                          height: 12,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -132,7 +135,7 @@ class Page6 extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 22,
+                          height: 12,
                         )
                       ],
                     ),
