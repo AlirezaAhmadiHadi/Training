@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+class List {
+  String image;
+  String title;
+  String des;
+
+  List(this.image, this.title, this.des);
+}
+
 class Page6 extends StatelessWidget {
   Page6({super.key});
 
   final content = [
-    ["lib/images/image_1.jpeg", "Food", "food"],
-    ["lib/images/image_2.jpeg", "Keyboard", "keyboard"],
-    ["lib/images/image_3.jpeg", "Table 1", "table 1"],
-    ["lib/images/image_4.jpeg", "Table 2", "table 2"],
-    ["lib/images/image_5.jpeg", "Table 3", "table 3"],
-    ["lib/images/image_6.jpeg", "Table 4", "table 4"],
-    ["lib/images/image_7.jpeg", "Table 5", "table 5"],
-    ["lib/images/image_8.jpeg", "Table 6", "table 6"],
-    ["lib/images/image_9.jpeg", "Table 7", "table 7"],
-    ["lib/images/image_10.jpeg", "Table 8", "table 8"]
+    List("lib/images/image_1.jpeg", "Food", "food"),
+    List("lib/images/image_2.jpeg", "Keyboard", "keyboard"),
+    List("lib/images/image_3.jpeg", "Table 1", "table 1"),
+    List("lib/images/image_4.jpeg", "Table 2", "table 2"),
+    List("lib/images/image_5.jpeg", "Table 3", "table 3"),
+    List("lib/images/image_6.jpeg", "Table 4", "table 4"),
+    List("lib/images/image_7.jpeg", "Table 5", "table 5"),
+    List("lib/images/image_8.jpeg", "Table 6", "table 6"),
+    List("lib/images/image_9.jpeg", "Table 7", "table 7"),
+    List("lib/images/image_10.jpeg", "Table 8", "table 8")
   ];
 
   @override
@@ -252,7 +260,7 @@ class Page6 extends StatelessWidget {
                             width: 40,
                             height: 40,
                             child: Image.asset(
-                              content[index][0],
+                              content[index].image,
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -264,14 +272,14 @@ class Page6 extends StatelessWidget {
                             ),
                           ),
                           title: Text(
-                            content[index][1],
+                            content[index].title,
                             style: TextStyle(
                               color: Color.fromARGB(255, 240, 240, 240),
                               fontSize: 18,
                             ),
                           ),
                           subtitle: Text(
-                            content[index][2],
+                            content[index].des,
                             style: TextStyle(
                               color: Color.fromARGB(255, 158, 158, 158),
                               fontSize: 13,
