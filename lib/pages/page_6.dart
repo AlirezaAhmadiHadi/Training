@@ -4,41 +4,17 @@ import 'package:flutter/services.dart';
 class Page6 extends StatelessWidget {
   Page6({super.key});
 
-  final List<AssetImage> images = [
-    AssetImage("lib/images/image_1.jpeg"),
-    AssetImage("lib/images/image_2.jpeg"),
-    AssetImage("lib/images/image_3.jpeg"),
-    AssetImage("lib/images/image_4.jpeg"),
-    AssetImage("lib/images/image_5.jpeg"),
-    AssetImage("lib/images/image_6.jpeg"),
-    AssetImage("lib/images/image_7.jpeg"),
-    AssetImage("lib/images/image_8.jpeg"),
-    AssetImage("lib/images/image_9.jpeg"),
-    AssetImage("lib/images/image_10.jpeg"),
-  ];
-  final List<String> discriptions = [
-    "food",
-    "Keyboard",
-    "Table 1",
-    "Table 2",
-    "Table 3",
-    "Table 4",
-    "Table 5",
-    "Table 6",
-    "Table 7",
-    "Table 8",
-  ];
-  final List<String> titles = [
-    "food",
-    "Keyboard",
-    "Table 1",
-    "Table 2",
-    "Table 3",
-    "Table 4",
-    "Table 5",
-    "Table 6",
-    "Table 7",
-    "Table 8",
+  final content = [
+    ["lib/images/image_1.jpeg", "Food", "food"],
+    ["lib/images/image_2.jpeg", "Keyboard", "keyboard"],
+    ["lib/images/image_3.jpeg", "Table 1", "table 1"],
+    ["lib/images/image_4.jpeg", "Table 2", "table 2"],
+    ["lib/images/image_5.jpeg", "Table 3", "table 3"],
+    ["lib/images/image_6.jpeg", "Table 4", "table 4"],
+    ["lib/images/image_7.jpeg", "Table 5", "table 5"],
+    ["lib/images/image_8.jpeg", "Table 6", "table 6"],
+    ["lib/images/image_9.jpeg", "Table 7", "table 7"],
+    ["lib/images/image_10.jpeg", "Table 8", "table 8"]
   ];
 
   @override
@@ -77,10 +53,8 @@ class Page6 extends StatelessWidget {
                             stops: [0, 0.05],
                           ).createShader(bounds);
                         },
-                        child: Image(
-                          image: AssetImage(
-                            'lib/images/image_main.jpg',
-                          ),
+                        child: Image.asset(
+                          'lib/images/image_main.jpg',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -225,7 +199,7 @@ class Page6 extends StatelessWidget {
                   color: Color.fromARGB(255, 20, 24, 59),
                   child: ListView.separated(
                     physics: const BouncingScrollPhysics(),
-                    itemCount: titles.length,
+                    itemCount: content.length,
                     separatorBuilder: (context, index) => Divider(
                         color: Color.fromARGB(255, 218, 218, 218),
                         endIndent: 25,
@@ -239,8 +213,8 @@ class Page6 extends StatelessWidget {
                           leading: SizedBox(
                             width: 40,
                             height: 40,
-                            child: Image(
-                              image: images[index],
+                            child: Image.asset(
+                              content[index][0],
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -249,13 +223,13 @@ class Page6 extends StatelessWidget {
                             color: Color.fromARGB(255, 218, 218, 218),
                           ),
                           title: Text(
-                            titles[index],
+                            content[index][1],
                             style: TextStyle(
                                 color: Color.fromARGB(255, 240, 240, 240),
                                 fontSize: 18),
                           ),
                           subtitle: Text(
-                            discriptions[index],
+                            content[index][2],
                             style: TextStyle(
                                 color: Color.fromARGB(255, 158, 158, 158),
                                 fontSize: 13),
