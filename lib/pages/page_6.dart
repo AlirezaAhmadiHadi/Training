@@ -1,29 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
-class List {
-  String image;
-  String title;
-  String des;
+class Content {
+  final String image;
+  final String title;
+  final String des;
 
-  List(this.image, this.title, this.des);
+  const Content({required this.image, required this.title, required this.des});
+
+  static Content convertJson(json) =>
+      Content(image: json['image'], title: json['title'], des: json['des']);
+}
+
+List<Content> getContent() {
+  const data = [
+    {"image": "lib/images/image_1.jpeg", "title": "Food", "des": "food"},
+    {
+      "image": "lib/images/image_2.jpeg",
+      "title": "Keyboard",
+      "des": "keyboard"
+    },
+    {"image": "lib/images/image_3.jpeg", "title": "Table 1", "des": "table 1"},
+    {"image": "lib/images/image_4.jpeg", "title": "Table 2", "des": "table 2"},
+    {"image": "lib/images/image_5.jpeg", "title": "Table 3", "des": "table 3"},
+    {"image": "lib/images/image_6.jpeg", "title": "Table 4", "des": "table 4"},
+    {"image": "lib/images/image_7.jpeg", "title": "Table 5", "des": "table 5"},
+    {"image": "lib/images/image_8.jpeg", "title": "Table 6", "des": "table 6"},
+    {"image": "lib/images/image_9.jpeg", "title": "Table 7", "des": "table 7"},
+    {"image": "lib/images/image_10.jpeg", "title": "Table 8", "des": "table 8"}
+  ];
+
+  return data.map<Content>(Content.convertJson).toList();
 }
 
 class Page6 extends StatelessWidget {
   Page6({super.key});
 
-  final content = [
-    List("lib/images/image_1.jpeg", "Food", "food"),
-    List("lib/images/image_2.jpeg", "Keyboard", "keyboard"),
-    List("lib/images/image_3.jpeg", "Table 1", "table 1"),
-    List("lib/images/image_4.jpeg", "Table 2", "table 2"),
-    List("lib/images/image_5.jpeg", "Table 3", "table 3"),
-    List("lib/images/image_6.jpeg", "Table 4", "table 4"),
-    List("lib/images/image_7.jpeg", "Table 5", "table 5"),
-    List("lib/images/image_8.jpeg", "Table 6", "table 6"),
-    List("lib/images/image_9.jpeg", "Table 7", "table 7"),
-    List("lib/images/image_10.jpeg", "Table 8", "table 8")
-  ];
+  final List<Content> contents = getContent();
 
   @override
   Widget build(BuildContext context) {
@@ -106,10 +118,14 @@ class Page6 extends StatelessWidget {
                                     onPressed: () {},
                                     child: Container(
                                       padding: EdgeInsets.only(
-                                          left: 12, right: 12, top: 5, bottom: 5),
+                                          left: 12,
+                                          right: 12,
+                                          top: 5,
+                                          bottom: 5),
                                       decoration: BoxDecoration(
                                         border: Border.all(
-                                          color: Color.fromARGB(226, 206, 40, 40),
+                                          color:
+                                              Color.fromARGB(226, 206, 40, 40),
                                         ),
                                         color: Color.fromARGB(176, 180, 31, 31),
                                         borderRadius: BorderRadius.all(
@@ -122,7 +138,8 @@ class Page6 extends StatelessWidget {
                                             padding: EdgeInsets.only(left: 5),
                                             child: Text(
                                               "دنبال میکنید",
-                                              style: TextStyle(color: Colors.white),
+                                              style: TextStyle(
+                                                  color: Colors.white),
                                             ),
                                           ),
                                           Icon(
@@ -138,9 +155,13 @@ class Page6 extends StatelessWidget {
                                     onPressed: () {},
                                     child: Container(
                                       padding: EdgeInsets.only(
-                                          left: 12, right: 12, top: 4, bottom: 5),
+                                          left: 12,
+                                          right: 12,
+                                          top: 4,
+                                          bottom: 5),
                                       decoration: BoxDecoration(
-                                        color: Color.fromARGB(223, 138, 138, 138),
+                                        color:
+                                            Color.fromARGB(223, 138, 138, 138),
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(20),
                                         ),
@@ -200,8 +221,7 @@ class Page6 extends StatelessWidget {
             ),
             Container(
               color: Color.fromARGB(255, 20, 24, 59),
-              padding:
-                  EdgeInsets.only(top: 10, right: 12, left: 12, bottom: 2),
+              padding: EdgeInsets.only(top: 10, right: 12, left: 12, bottom: 2),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -232,7 +252,7 @@ class Page6 extends StatelessWidget {
                 color: Color.fromARGB(255, 20, 24, 59),
                 child: ListView.separated(
                   physics: const BouncingScrollPhysics(),
-                  itemCount: content.length,
+                  itemCount: contents.length,
                   separatorBuilder: (context, index) => Divider(
                     color: Color.fromARGB(255, 218, 218, 218),
                     endIndent: 25,
@@ -241,6 +261,7 @@ class Page6 extends StatelessWidget {
                     thickness: .15,
                   ),
                   itemBuilder: (context, index) {
+                    final content = contents[index];
                     return TextButton(
                       onPressed: () {},
                       child: ListTile(
@@ -251,7 +272,7 @@ class Page6 extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Image.asset(
-                            content[index].image,
+                            content.image,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -263,14 +284,14 @@ class Page6 extends StatelessWidget {
                           ),
                         ),
                         title: Text(
-                          content[index].title,
+                          content.title,
                           style: TextStyle(
                             color: Color.fromARGB(255, 240, 240, 240),
                             fontSize: 18,
                           ),
                         ),
                         subtitle: Text(
-                          content[index].des,
+                          content.des,
                           style: TextStyle(
                             color: Color.fromARGB(255, 158, 158, 158),
                             fontSize: 13,
