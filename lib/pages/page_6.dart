@@ -34,7 +34,7 @@ class Page6 extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: screenHight * 0.3,
+                height: screenHight * 0.25,
                 width: double.infinity,
                 child: Stack(
                   children: [
@@ -156,14 +156,15 @@ class Page6 extends StatelessWidget {
                     ),
                     Align(
                       alignment: Alignment.bottomLeft,
-                      child: Padding(
-                        padding: EdgeInsets.only(top: 5, left: 0),
+                      child: TextButton(
+                        onPressed: () {},
                         child: Text(
                           "بیشتر",
                           style: TextStyle(
-                              color: Color.fromARGB(255, 218, 218, 218),
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
+                            color: Color.fromARGB(255, 218, 218, 218),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
@@ -172,24 +173,28 @@ class Page6 extends StatelessWidget {
               ),
               Container(
                 color: Color.fromARGB(255, 20, 24, 59),
-                padding:
-                    EdgeInsets.only(top: 30, right: 12, left: 12, bottom: 10),
+                padding: EdgeInsets.only(top: 10, right: 12, left: 12, bottom: 2),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "تک آهنگ ها",
                       style: TextStyle(
-                          color: Color.fromARGB(255, 218, 218, 218),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
+                        color: Color.fromARGB(255, 218, 218, 218),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                    Text(
-                      "بیشتر",
-                      style: TextStyle(
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "بیشتر",
+                        style: TextStyle(
                           color: Color.fromARGB(255, 218, 218, 218),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
+                          fontSize: 19,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -201,15 +206,19 @@ class Page6 extends StatelessWidget {
                     physics: const BouncingScrollPhysics(),
                     itemCount: content.length,
                     separatorBuilder: (context, index) => Divider(
-                        color: Color.fromARGB(255, 218, 218, 218),
-                        endIndent: 25,
-                        indent: 16,
-                        height: 2,
-                        thickness: .15),
+                      color: Color.fromARGB(255, 218, 218, 218),
+                      endIndent: 25,
+                      indent: 16,
+                      height: 0,
+                      thickness: .15,
+                    ),
                     itemBuilder: (context, index) {
-                      return OutlinedButton(
+                      return TextButton(
                         onPressed: () {},
                         child: ListTile(
+                          dense: true,
+                          visualDensity: VisualDensity(vertical: -1),
+                          contentPadding: EdgeInsets.only(right: 5),
                           leading: SizedBox(
                             width: 40,
                             height: 40,
@@ -218,21 +227,26 @@ class Page6 extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                           ),
-                          trailing: Icon(
-                            Icons.more_vert,
-                            color: Color.fromARGB(255, 218, 218, 218),
+                          trailing: IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.more_vert,
+                              color: Color.fromARGB(255, 218, 218, 218),
+                            ),
                           ),
                           title: Text(
                             content[index][1],
                             style: TextStyle(
-                                color: Color.fromARGB(255, 240, 240, 240),
-                                fontSize: 18),
+                              color: Color.fromARGB(255, 240, 240, 240),
+                              fontSize: 18,
+                            ),
                           ),
                           subtitle: Text(
                             content[index][2],
                             style: TextStyle(
-                                color: Color.fromARGB(255, 158, 158, 158),
-                                fontSize: 13),
+                              color: Color.fromARGB(255, 158, 158, 158),
+                              fontSize: 13,
+                            ),
                           ),
                         ),
                       );
