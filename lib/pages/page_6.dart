@@ -91,53 +91,58 @@ class Page6 extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 12,
+                          height: 6,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
-                              padding: EdgeInsets.only(
-                                  left: 12, right: 12, top: 5, bottom: 5),
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Color.fromARGB(226, 206, 40, 40),
+                            TextButton(
+                              onPressed: () {},
+                              child: Container(
+                                padding: EdgeInsets.only(
+                                    left: 12, right: 12, top: 5, bottom: 5),
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Color.fromARGB(226, 206, 40, 40),
+                                  ),
+                                  color: Color.fromARGB(176, 180, 31, 31),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(20),
+                                  ),
                                 ),
-                                color: Color.fromARGB(176, 180, 31, 31),
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(20),
-                                ),
-                              ),
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 5),
-                                    child: Text(
-                                      "دنبال میکنید",
-                                      style: TextStyle(color: Colors.white),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 5),
+                                      child: Text(
+                                        "دنبال میکنید",
+                                        style: TextStyle(color: Colors.white),
+                                      ),
                                     ),
-                                  ),
-                                  Icon(
-                                    Icons.check,
-                                    size: 18,
-                                    color: Colors.white,
-                                  ),
-                                ],
+                                    Icon(
+                                      Icons.check,
+                                      size: 18,
+                                      color: Colors.white,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                            Container(
-                              margin: EdgeInsets.only(right: 15),
-                              padding: EdgeInsets.only(
-                                  left: 12, right: 12, top: 4, bottom: 5),
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(223, 138, 138, 138),
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(20),
+                            TextButton(
+                              onPressed: () {},
+                              child: Container(
+                                padding: EdgeInsets.only(
+                                    left: 12, right: 12, top: 4, bottom: 5),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(223, 138, 138, 138),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(20),
+                                  ),
                                 ),
-                              ),
-                              child: Text(
-                                "مسابقه",
-                                style: TextStyle(color: Colors.white),
+                                child: Text(
+                                  "مسابقه",
+                                  style: TextStyle(color: Colors.white),
+                                ),
                               ),
                             ),
                           ],
