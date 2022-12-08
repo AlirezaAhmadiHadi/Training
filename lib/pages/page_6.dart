@@ -142,6 +142,28 @@ class Page6 extends StatelessWidget {
                   ],
                 ),
               ),
+              // Handle text overflow #1
+              // Container(
+              //   color: Color.fromARGB(255, 16, 19, 46),
+              //   height: 103,
+              //   padding: EdgeInsets.all(12),
+              //   child: SingleChildScrollView(
+              //     scrollDirection: Axis.vertical,
+              //     physics: BouncingScrollPhysics(),
+              //     child: Align(
+              //       alignment: Alignment.centerRight,
+              //       child: Text(
+              //         "علیرضا احمدی هادی در سال ۱۳۸۰ در اردبیل متولد شده است و اصالتا ترک است. پدرش اردبیلی و مادرش هم اردبیلی است او از سن ۱۱ سالگی" *
+              //             5,
+              //         style: TextStyle(
+              //           color: Color.fromARGB(255, 230, 230, 230),
+              //           fontSize: 13,
+              //         ),
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // Handle text overflow #2
               Container(
                 color: Color.fromARGB(255, 16, 19, 46),
                 padding: EdgeInsets.all(12),
@@ -150,7 +172,10 @@ class Page6 extends StatelessWidget {
                     Align(
                       alignment: Alignment.centerRight,
                       child: Text(
-                        " علیرضا احمدی هادی در سال ۱۳۸۰ در اردبیل متولد شده است و اصالتا ترک است. پدرش اردبیلی و مادرش هم اردبیلی است او از سن ۱۱ سالگی ...",
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        "علیرضا احمدی هادی در سال ۱۳۸۰ در اردبیل متولد شده است و اصالتا ترک است. پدرش اردبیلی و مادرش هم اردبیلی است او از سن ۱۱ سالگی" *
+                            5,
                         style: TextStyle(
                           color: Color.fromARGB(255, 230, 230, 230),
                           fontSize: 13,
@@ -176,7 +201,8 @@ class Page6 extends StatelessWidget {
               ),
               Container(
                 color: Color.fromARGB(255, 20, 24, 59),
-                padding: EdgeInsets.only(top: 10, right: 12, left: 12, bottom: 2),
+                padding:
+                    EdgeInsets.only(top: 10, right: 12, left: 12, bottom: 2),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
